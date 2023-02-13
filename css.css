@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #e2243f;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.container .img,
+.container .data {
+    flex-basis: 45%;
+}
+
+.container .img {
+    border: 20px solid #e22440a8;
+    min-width: 500px;
+    min-height: 500px;
+    position: relative;
+
+}
+
+.container .img img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-85px , -50%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transform: translate(-85px , -50%);
+    -moz-transform: translate(-85px , -50%);
+    -ms-transform: translate(-85px , -50%);
+    -o-transform: translate(-85px , -50%);
+}
+.container .data h2
+{
+    text-transform: capitalize;
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 10px;
+}
+.container .data .about
+{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+.container .data .text
+{
+    color: #747474;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.container .data .content
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.container .data .content img
+{
+    width: 100px;
+}
+.container .data .content .box
+{
+    border: solid 2px #d8d8d8a2;
+    padding: 30px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    counter-increment: count;
+    
+    
+}
+.container .data .content .box p
+{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.container .data .content .box::after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 0px 30px 30px 20px;
+    border-style: solid;
+    border-color: transparent var(--main-color) transparent transparent;
+    top: 4px;
+    right: 4px;
+
+}
+.container .data .content .box::before
+{
+    position: absolute;
+    content: '0'counter(count);
+    z-index: -1;
+    font-size: 70px;
+    font-weight: 900;
+    right: 20px;
+    bottom: -5px;
+    color: #ebebeb;
+}
+.container .data .hr
+{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.container .data .hr hr
+{
+    border: 1px solid var(--main-color);
+    width: 50px;
+    position: relative;
+}
+.container .data .hr div::before
+{
+   
+   content: ' ';
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: -50%;
+   transform:translate(-50% , -50%);
+   border: 20px solid var(--main-color);
+   -webkit-transform:translate(-50% , -50%);
+   -moz-transform:translate(-50% , -50%);
+   -ms-transform:translate(-50% , -50%);
+   -o-transform:translate(-50% , -50%);
+}
